@@ -1,19 +1,15 @@
-/*!
-* Copyright 2010 - 2017 Hitachi Vantara.  All rights reserved.
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
+/*! ******************************************************************************
+ *
+ * Pentaho
+ *
+ * Copyright (C) 2024 by Hitachi Vantara, LLC : http://www.pentaho.com
+ *
+ * Use of this software is governed by the Business Source License included
+ * in the LICENSE.TXT file.
+ *
+ * Change Date: 2029-07-20
+ ******************************************************************************/
+
 
 /*
  pentaho.pda.MqlHandler
@@ -571,7 +567,7 @@ pentaho.pda.query.mql = function(model) {
   pentaho.pda.query.call(this,model); //call parent object
 
   this.state = {
-    "class" : "org.pentaho.common.ui.metadata.model.impl.Query",
+    "class" : "org.pentaho.platform.dataaccess.metadata.model.impl.Query",
     "domainName" : null,
     "modelId" : null,
     "disableDistinct" : false,
@@ -611,7 +607,7 @@ pentaho.pda.query.mql.prototype.prepare = function( ) {
 
 pentaho.pda.query.mql.prototype.createSelection = function() {
   var selection = {
-    "class":"org.pentaho.common.ui.metadata.model.impl.Column",
+    "class":"org.pentaho.platform.dataaccess.metadata.model.impl.Column",
     "aggTypes":[],
     "category":null,
     "defaultAggType":null,
@@ -626,7 +622,7 @@ pentaho.pda.query.mql.prototype.createSelection = function() {
 
 pentaho.pda.query.mql.prototype.createSort = function() {
   var sort = {
-    "class" : "org.pentaho.common.ui.metadata.model.impl.Order",
+    "class" : "org.pentaho.platform.dataaccess.metadata.model.impl.Order",
     "category" : null,
     "column" : null,
     "orderType" : pentaho.pda.Column.SORT_TYPES.ASCENDING
@@ -636,7 +632,7 @@ pentaho.pda.query.mql.prototype.createSort = function() {
 
 pentaho.pda.query.mql.prototype.createCondition = function() {
   var condition = {
-    "class" : "org.pentaho.common.ui.metadata.model.impl.Condition",
+    "class" : "org.pentaho.platform.dataaccess.metadata.model.impl.Condition",
     "category" : null,
     "column" : null,
     "operator" : null,
@@ -650,7 +646,7 @@ pentaho.pda.query.mql.prototype.createCondition = function() {
 
 pentaho.pda.query.mql.prototype.createParameter = function() {
   var parameter = {
-    "class" : "org.pentaho.common.ui.metadata.model.impl.Parameter",
+    "class" : "org.pentaho.platform.dataaccess.metadata.model.impl.Parameter",
     "column": null,
     "name": null,
     "type" : null,
